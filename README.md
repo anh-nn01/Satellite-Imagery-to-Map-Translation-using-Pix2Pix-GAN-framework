@@ -4,3 +4,13 @@ PyTorch Implementation of Pix2Pix framework to train a U-Net with Generative Adv
 
 # Trained Generator and Discriminator:<br>
 Click this link to download the trained weights for the Sat2Map Generator and Discriminator: [Download Weights](https://drive.google.com/file/d/1vvv2dXL98_M4SrjUgGps2vt1FzGRKH7B/view?usp=sharing)
+
+# Ideas and Intuition of cGAN (conditional GAN)
+
+# Generator Architecture
+
+# Discriminator Architecture
+
+# Loss Function
+
+# Results
