@@ -16,8 +16,7 @@ As suggested by the paper in the reference, here are the values of the hyper-par
 # Ideas and Intuition of cGAN (conditional GAN)
 * Original GAN trains the Generator to map a random noise **z** to the output image **G(z)** which should look as realistic as possible and trains the Discriminator to recognize the input image **x** as real/fake image based solely on the input image **x**.
 * Since GAN model learns to generate image **G(z)** based only on a random noise **z**, and since we cannot easily control the distribution of **z**, it is often difficult to control the output according to our desire. GAN model only ensures that **G(z)** is realistic, but not necessarily matches our expectation. For instance, GAN Generator can be trained to map a random noise to a very realistic human face, but we cannot control the Generator to generate a white human face which look like Emma Watson.
-* cGAN solves this problem by taking both the random noise **z** and the input image **x** to produce an output image **G(z|x)** which both look realistic and correspond to **x**.
-**D(y|x)=1** if **y** is BOTH realistic and correspond to **x**
+* cGAN solves this problem by taking both the random noise **z** and the input image **x** to produce an output image **G(z|x)** which looks realistic and corresponds to **x**. Since we can control which input image **x** is fed into the network, we can control what the output image **G(z|x)** will be like. The Discriminator is trained so that **D(y|x)=1** if **y** is BOTH realistic and correspond to **x**; on the other hand, **D(y|x)=0** if **y** is either unrealistic or unrelated to input **x** or neither. This forces the Generator to learn to generate output **G(z|x)** that is both realistic and capture the overall distribution of input **x** and makes the image translation task possible.
 # Generator Architecture - U-Net
 
 # Discriminator Architecture - Convolutional Neural Network
