@@ -44,6 +44,7 @@ Just like original GAN, optimizing this Loss will forces the Generator to produc
 <img src="Visualization/4.png"><br>
 By using pixel-wise loss between 2 images, this loss forces the output image to be as close to the expected output as possible. In other words, it improves the minor details of the output.<br>
 * **Final Loss:**<br>
-<img src="Visualization/5.png">
+<img src="Visualization/5.png"><br>
+We simply combine GAN loss and L1 Loss to have the final Loss for the entire algorithm.
 
 # Results
