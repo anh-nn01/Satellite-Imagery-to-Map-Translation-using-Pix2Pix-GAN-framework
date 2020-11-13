@@ -22,7 +22,7 @@ As suggested by the paper in the reference, here are the values of the hyper-par
 * Instead of mapping a random noise to an image, the Generator maps an image to another representation of the same image. This is image translation task, and that's why the framework was named "Pix2Pix".
 * The neural architecture that the Generator uses is the U-Net, which is basically Encoder-Decoder with skip connections between layers in the Encoder and corresponding layers in the Decoder.
 * Architecture of the U-Net:<br>
-<img src="2.png"><br>
+<img src="Visualization/2.png"><br>
 * The architecture above is the U-Net 572. What I used in this project is U-Net 256. The only difference is the input image size and the output image size.
 * Function: 
   - The Encoder is the convolutional layers to the left of the network. The role of those layers is to extract core features of the image and map those features to the bottlekneck latent space at the middle of the network (an 1024-D array). This latent space is the encoded form which contains the most important information of the input image.
@@ -37,5 +37,13 @@ As suggested by the paper in the reference, here are the values of the hyper-par
 # Loss Function
 * Now we define the Objective for the training process.
 * In Image translation task, the GAN training scheme is almost the same as the original GAN, except now we have conditional input and an additional L1 loss to ensure the generated image is not too different from the expected output.
-* **GAN Loss**:
+* **GAN Loss**:<br>
+<img src="Visualization/3.png"><br>
+Just like original GAN, optimizing this Loss will forces the Generator to produce results with overall distribution close to that of the image representation in the dataset and thus improve the structural quality of the Generator's output.<br>
+* **L1 Loss**:<br>
+<img src="Visualization/4.png"><br>
+By using pixel-wise loss between 2 images, this loss forces the output image to be as close to the expected output as possible. In other words, it improves the minor details of the output.<br>
+* **Final Loss:**<br>
+<img src="Visualization/5.png">
+
 # Results
