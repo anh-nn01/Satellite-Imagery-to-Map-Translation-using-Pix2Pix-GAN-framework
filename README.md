@@ -15,9 +15,9 @@ As suggested by the paper in the reference, here are the values of the hyper-par
 
 # Ideas and Intuition of cGAN (conditional GAN)
 
-# Generator Architecture
+# Generator Architecture - U-Net
 
-# Discriminator Architecture
+# Discriminator Architecture - Convolutional Neural Network
 
 # Loss Function
 
