@@ -3,7 +3,8 @@ PyTorch Implementation of Pix2Pix framework from scratch to train a U-Net with G
 <b>Reference</b>: https://arxiv.org/abs/1611.07004
 
 # Trained Generator and Discriminator:<br>
-Click this link to download the trained weights for the Sat2Map Generator and Discriminator: [Download Weights](https://drive.google.com/file/d/1vvv2dXL98_M4SrjUgGps2vt1FzGRKH7B/view?usp=sharing)
+* Click this link to download the trained weights for the Sat2Map Generator and Discriminator: [Download Weights](https://drive.google.com/file/d/1vvv2dXL98_M4SrjUgGps2vt1FzGRKH7B/view?usp=sharing)
+* Dataset: [Download Sat2Map Dataset](https://drive.google.com/file/d/1s5a2UeJR4H_KJ-nV4NmRMkBHr3zn20Tf/view?usp=sharing)
 
 # Hyper-parameters
 As suggested by the paper in the reference, here are the values of the hyper-parameters to train the Sat2Map model:</br>
@@ -55,3 +56,6 @@ We simply combine GAN loss and L1 Loss to have the final Loss for the entire alg
 <img src="Visualization/7.png"> <br>
 <br><br>
 * The Generator successfully learned to capture main structures in satellite imagery such as roads, buildings, forests, rivers, seas, etc, map those structures to an encoded vector, and then map the encoded vector back to a full image with map representation.
+
+# Other applications
+* Pix2Pix GAN framework is a common framework for any image translation task. The algorithm I implemented above was trained specifically to translate Satellite Imagery to Map image. If you have access to other image translation dataset, you only need to retrain the model to have another Generator which translate other types of image. Some examples are Photos to Drawings, Drawings to Photos, B&W images to Colored Images, Photos to Cartoon, Photos to Anime, etc.
