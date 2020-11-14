@@ -48,3 +48,10 @@ By using pixel-wise loss between 2 images, this loss forces the output image to 
 We simply combine GAN loss and L1 Loss to have the final Loss for the entire algorithm.
 
 # Results
+* The image patch with 24 images below shows the results of the Sat2Map Generator.<br>
+* Satellite imagery (input):<br>
+<img src="Visualization/6.png"><br>
+* Map Representation (output): <br>
+<img src="Visualization/7.png"> <br>
+<br><br>
+* The Generator successfully learned to capture main structures in satellite imagery such as roads, buildings, forests, rivers, seas, etc, map those structures to an encoded vector, and then map the encoded vector back to a full image with map representation.
